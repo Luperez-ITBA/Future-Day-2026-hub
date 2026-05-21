@@ -204,7 +204,7 @@ st.write("### 🚀 Experiencias Interactivas")
 apps = [
     {"titulo": "⚽ Paradoja de la racha", "desc": "¿Conviene Enfrentar a Sacachispas o Real Madrid?", "url": "https://future-day-2026-streak-kaz6bgjpiw25m6ahsjpsfy.streamlit.app/", "icono": "🥅"},
     {"titulo": "🥧 Calculando Pi con Dardos", "desc": "von Neumann visita Monte Carlo.", "url": "https://future-day-2026-01-mcpi-nvhqgvk2ezle3rfb9rgcjb.streamlit.app/", "icono": "🎯"},
-    {"titulo": "🎂 Cumpleaños y Probabilidades", "desc": "¿Por qué solo 23 invitados bastan para asegurar una coincidencia?", "url": "https://future-day-2026-birthday-yni9zpxujh2xwfyjzquf7f.streamlit.app/", "icono": "🍰"},
+    {"titulo": "🎂 Cumpleaños Coincidentes", "desc": "¿Por qué solo 23 invitados bastan para asegurar una coincidencia?", "url": "https://future-day-2026-birthday-yni9zpxujh2xwfyjzquf7f.streamlit.app/", "icono": "🍰"},
     {"titulo": "🎁 El Dilema de Monty Hall", "desc": "A ver, a ver ¿qué pasó aquí? 🤔", "url": "https://future-day-2026-monty-hr7ey836gttjc6c7srpujq.streamlit.app/", "icono": "🚪"},
     {"titulo": "📋 La Paradoja del Fiscal", "desc": "Falsos Positivos y Probabilidades Contraintuitivas.", "url": "https://future-day-2026-facial-bjp4gqcxdj8atb4h9rcy5e.streamlit.app/", "icono": "🩺"},
     {"titulo": "🧪 El Paseo al Azar", "desc": "Caminatas Dudosas y Movimiento Browniano.", "url": "https://future-day-2026-brownian-3muvodcsqtdcsrrec6vke4.streamlit.app/", "icono": "📉"}
