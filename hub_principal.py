@@ -78,15 +78,20 @@ st.markdown("""
         color: #ffffff !important;
         text-align: center;
         border-radius: 10px;
-        text-decoration: none;
+        text-decoration: none !important; /* Fuerza a quitar el subrayado */
         font-weight: 600;
         font-size: 16px;
         transition: background-color 0.3s ease;
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
+    
+    /* Estados del botón para que nunca aparezca el subrayado */
+    .btn-nav:hover, .btn-nav:visited, .btn-nav:active {
+        text-decoration: none !important;
+        color: white !important;
+    }
     .btn-nav:hover {
         background-color: #0074D9;
-        color: white !important;
     }
     
     /* Estilo para alinear el QR a la derecha */
