@@ -54,7 +54,7 @@ st.markdown("""
         font-size: 32px !important;
     }
     .intro-text-side p {
-        font-size: 22px !important; /* Aumentado un par de puntos */
+        font-size: 22px !important;
         line-height: 1.5;
         color: #1e293b;
     }
@@ -68,38 +68,42 @@ st.markdown("""
         margin-bottom: 15px;
         border-top: 5px solid #D86018;
     }
-    .stButton>button {
+    
+    /* Botón de navegación personalizado (misma pestaña) */
+    .btn-nav {
+        display: block;
         width: 100%;
-        border-radius: 10px;
+        padding: 12px 0;
         background-color: #001f3f;
-        color: white;
+        color: #ffffff !important;
+        text-align: center;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .btn-nav:hover {
+        background-color: #0074D9;
+        color: white !important;
     }
     
     /* Estilo para alinear el QR a la derecha */
     [data-testid="stHorizontalBlock"] > div:last-child {
         display: flex;
         justify-content: flex-end;
-        align-items: center; /* Centrado vertical con el texto */
-    }
-            
-    .stButton>button {
-        width: 100%;
-        border-radius: 10px;
-        background-color: #001f3f;
-        color: white;
-    }
-    
-    /* Estilo para alinear el QR a la derecha */
-    [data-testid="stHorizontalBlock"] > div:last-child {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center; /* Centrado vertical con el texto */
+        align-items: center;
     }
 
     /* --- PARCHE RESPONSIVO PARA CELULARES --- */
     @media (max-width: 768px) {
-        h1 { font-size: 26px !important; }
-        h3 { font-size: 16px !important; }
+        h1 {
+            font-size: 26px !important;
+        }
+        h3 {
+            font-size: 16px !important;
+        }
         .intro-box {
             flex-direction: column !important;
             padding: 20px !important;
@@ -115,8 +119,12 @@ st.markdown("""
             width: 120px !important;
             height: 80px !important;
         }
-        .intro-text-side h2 { font-size: 22px !important; }
-        .intro-text-side p { font-size: 16px !important; }
+        .intro-text-side h2 {
+            font-size: 22px !important;
+        }
+        .intro-text-side p {
+            font-size: 16px !important;
+        }
         .math-container {
             font-size: 15px !important;
             padding: 10px 15px !important;
@@ -125,7 +133,9 @@ st.markdown("""
             box-sizing: border-box !important;
             word-wrap: break-word !important;
         }
-        .fraction { font-size: 14px !important; }
+        .fraction {
+            font-size: 14px !important;
+        }
     }
     </style>
     """, unsafe_allow_html=True)
@@ -140,13 +150,11 @@ with col_logo:
         st.write("### ITBA")
 
 with col_titulo:
-    # Título principal y subtítulo
     st.markdown("<h1 style='color: #0074D9; font-size: 48px; margin-bottom: 0;'>Razonando con Probabilidades</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='color: #475569; margin-top: 5px;'>Intuiciones, Paradojas y Cálculos</h3>", unsafe_allow_html=True)
     st.write("Future Day 2026 - Explorando la matemática del azar")
 
 with col_qr:
-    # Se agrega el código QR UN POCO MÁS GRANDE (180px)
     if os.path.exists('qr-code.png'):
         st.image('qr-code.png', width=180) 
     else:
@@ -179,16 +187,15 @@ st.markdown(f"""
     </div>
 """, unsafe_allow_html=True)
 
-# Botón centrado para ir a la intro extendida
+# Botón centrado para ir a la intro extendida (Misma pestaña)
 col_vacia1, col_boton_intro, col_vacia2 = st.columns([1, 1, 1])
 with col_boton_intro:
-    # Enlace a la introducción teórica
-    st.link_button("Introducción Teórica-Histórica", "https://future-day-2026-intro-yym3jwktpbunjoytjix7xq.streamlit.app/", use_container_width=True)
+    st.markdown('<a href="https://future-day-2026-intro.streamlit.app/" target="_self" class="btn-nav">Introducción Teórica-Histórica</a>', unsafe_allow_html=True)
 
 st.write("---")
 st.write("### 🚀 Experiencias Interactivas")
 
-# --- SECCIÓN 2: GRILLA DE Apps ---
+# --- SECCIÓN 2: GRILLA DE APPS ---
 apps = [
     {"titulo": "⚽ Paradoja de la racha", "desc": "¿Conviene Enfrentar a Sacachispas o Real Madrid?", "url": "https://future-day-2026-streak-kaz6bgjpiw25m6ahsjpsfy.streamlit.app/", "icono": "🥅"},
     {"titulo": "🥧 Calculando Pi con Dardos", "desc": "von Neumann visita Monte Carlo.", "url": "https://future-day-2026-01-mcpi-nvhqgvk2ezle3rfb9rgcjb.streamlit.app/", "icono": "🎯"},
@@ -208,8 +215,8 @@ for row in rows:
                     <h3>{app['icono']} {app['titulo']}</h3>
                     <p style="height: 60px; color: #475569;">{app['desc']}</p>
                 </div>
+                <a href="{app['url']}" target="_self" class="btn-nav">Abrir Experimento</a>
             """, unsafe_allow_html=True)
-            st.link_button("Abrir Experimento", app['url'])
 
 st.write("---")
 st.caption("ITBA Future Day 2026 - Departamento de Ciencias Exactas y Naturales")
