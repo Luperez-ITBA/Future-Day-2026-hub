@@ -69,7 +69,7 @@ st.markdown("""
         border-top: 5px solid #D86018;
     }
     
-    /* Botón de navegación personalizado (misma pestaña) */
+    /* Botón de navegación personalizado (misma pestaña, corrigiendo el target) */
     .btn-nav {
         display: block;
         width: 100%;
@@ -187,10 +187,10 @@ st.markdown(f"""
     </div>
 """, unsafe_allow_html=True)
 
-# Botón centrado para ir a la intro extendida (Misma pestaña)
+# Botón centrado para ir a la intro extendida (Cambiado a _top)
 col_vacia1, col_boton_intro, col_vacia2 = st.columns([1, 1, 1])
 with col_boton_intro:
-    st.markdown('<a href="https://future-day-2026-intro.streamlit.app/" target="_self" class="btn-nav">Introducción Teórica-Histórica</a>', unsafe_allow_html=True)
+    st.markdown('<a href="https://future-day-2026-intro.streamlit.app/" target="_top" class="btn-nav">Introducción Teórica-Histórica</a>', unsafe_allow_html=True)
 
 st.write("---")
 st.write("### 🚀 Experiencias Interactivas")
@@ -215,7 +215,7 @@ for row in rows:
                     <h3>{app['icono']} {app['titulo']}</h3>
                     <p style="height: 60px; color: #475569;">{app['desc']}</p>
                 </div>
-                <a href="{app['url']}" target="_self" class="btn-nav">Abrir Experimento</a>
+                <a href="{app['url']}" target="_top" class="btn-nav">Abrir Experimento</a>
             """, unsafe_allow_html=True)
 
 st.write("---")
