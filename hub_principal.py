@@ -190,7 +190,7 @@ st.markdown(f"""
 # Botón centrado para ir a la intro extendida (Cambiado a _top)
 col_vacia1, col_boton_intro, col_vacia2 = st.columns([1, 1, 1])
 with col_boton_intro:
-    st.markdown('<a href="https://future-day-2026-intro.streamlit.app/" target="_top" class="btn-nav">Introducción Teórica-Histórica</a>', unsafe_allow_html=True)
+    st.markdown('<a href="https://future-day-2026-intro-yym3jwktpbunjoytjix7xq.streamlit.app/" target="_top" class="btn-nav">Introducción Teórica-Histórica</a>', unsafe_allow_html=True)
 
 st.write("---")
 st.write("### 🚀 Experiencias Interactivas")
