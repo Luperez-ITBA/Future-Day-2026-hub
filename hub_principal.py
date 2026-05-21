@@ -183,7 +183,7 @@ st.markdown(f"""
 col_vacia1, col_boton_intro, col_vacia2 = st.columns([1, 1, 1])
 with col_boton_intro:
     # Enlace a la introducción teórica
-    st.link_button("Introducción Teórica-Histórica", "https://future-day-2026-intro.streamlit.app/", use_container_width=True)
+    st.link_button("Introducción Teórica-Histórica", "https://future-day-2026-intro-yym3jwktpbunjoytjix7xq.streamlit.app/", use_container_width=True)
 
 st.write("---")
 st.write("### 🚀 Experiencias Interactivas")
